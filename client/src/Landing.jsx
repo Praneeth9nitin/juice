@@ -16,6 +16,7 @@ import exoticbg from './assets/eroticbg.png'
 import lemonbg from './assets/lemonbg.png'
 import pearbg from './assets/pearbg.png'
 import quiencebg from './assets/orangebg.png'
+import { fruit } from './Array'
 
 function Landing() {
     const [clicked, setClicked] = useState(0)
@@ -25,38 +26,6 @@ function Landing() {
         gsap.to('.slide2',{y:clicked*100/6+"%"})
     },[clicked])
 
-    const fruit = [
-        {
-            name: "Apple",
-            img: "some url",
-            color:"#FFDEDD"
-        },
-        {
-            name: "Exotic",
-            img: "some url",
-            color:"#E4E4FE"
-        },
-        {
-            name: "Cherry",
-            img: "some url",
-            color:"#FEDCEC"
-        },
-        {
-            name: "Pear",
-            img: "some url",
-            color:"#DCFFDE"
-        },
-        {
-            name: "Lemon",
-            img: "some url",
-            color:"#FFDB8C"
-        },
-        {
-            name: "Quience",
-            img: "some url",
-            color:"#99783E"
-        },
-    ]
     return (
         <div className='flex justify-center items-center font-poppins'>
         <div className='flex absolute top-0 left-0 slide'>
@@ -83,11 +52,11 @@ function Landing() {
             <div className= 'h-40 cursor-pointer static'  onClick={()=>{`${clicked}`!=0?setClicked((clicked)=>clicked-1):null;console.log(clicked)}}><img className='h-full' src={leftArrow} alt=""/></div>
             <div className='w-1/2 flex justify-between items-center absolute top-40 slide1 left-80 flex-col'>
             <div className='h-screen'><img className='object-cover w-44' src={apple} alt="" /></div>
-            <div className='h-screen'><img className='object-cover w-52' src={exotic} alt="" /></div>
+            <div className='h-screen'><img className='object-cover w-44' src={exotic} alt="" /></div>
             <div className='h-screen'><img className='object-cover w-44' src={cherry} alt="" /></div>
-            <div className='h-screen'><img className='object-cover w-60' src={pear} alt="" /></div>
-            <div className='h-screen'><img className='object-cover w-64' src={lemon} alt="" /></div>
-            <div className='h-screen'><img className='object-cover w-60' src={quience} alt="" /></div>
+            <div className='h-screen'><img className='object-cover w-44' src={pear} alt="" /></div>
+            <div className='h-screen'><img className='object-cover w-44' src={lemon} alt="" /></div>
+            <div className='h-screen'><img className='object-cover w-44' src={quience} alt="" /></div>
             </div>
             <div className='h-40 cursor-pointer static' onClick={()=>{`${clicked}`!=5?setClicked((clicked)=>clicked+1):null;console.log(clicked)}}><img className='h-full' src={rightArrow} alt=""/></div>
            </div>
